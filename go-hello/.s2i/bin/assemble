@@ -1,3 +1,7 @@
 cp -Rf /tmp/src/. /opt/app-root/
 
-go build app-v2.go
+rm app.go
+
+mv app-v2.go app.go
+
+go build app.go
