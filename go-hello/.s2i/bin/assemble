@@ -1,0 +1,3 @@
+cp -Rf /tmp/src/. /opt/app-root/
+
+go build app-v2.go
