@@ -1,1 +1,18 @@
 FROM quay.io/redhattraining/httpd-parent
+
+LABEL io.openshift.expose-services="8080:http"
+      io.k8s.desription="A basic apache http server"
+      io.k8s.display-name="Apache HTTP Server"
+      io.openshift.tage="apache, httpd"
+
+RUN sed -i "s/Listen 80/Listen 8080/g" /etc/httpd/conf/httpd.conf && \
+    chgrp -R 0 /var/log/httpd /var/run/httpd && \
+    chmod -R g=u /var/log/httpd /var/run/httpd
+
+
+USER 1001
+      
+
+EXPOSE 8080
+
+
