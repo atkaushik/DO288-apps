@@ -1,0 +1,10 @@
+echo "installing app"
+cp -Rf /tmp/src/*.html ./
+
+DATE=`date "+%YY-%m-%d"`
+
+echo $DATE > ./info.html
+
+echo "Amit Kaushik" >> ./info.html
+
+
