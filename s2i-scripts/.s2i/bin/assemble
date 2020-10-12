@@ -7,6 +7,9 @@ echo "------------Installing app-----------------------"
 
 cp -Rf /tmp/src/* /opt/app-root/src/
 
-echo "Amit Kaushik\n" > /opt/app-root/src/info.html
+echo "Amit Kaushik" > /opt/app-root/src/info.html
+
+echo "" >> /opt/app-root/src/info.html
+
 
 echo `date +%Y-%m-%d` >> /opt/app-root/src/info.html
