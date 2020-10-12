@@ -1,10 +1,13 @@
-echo "installing app"
-cp -Rf /tmp/src/*.html ./
-
-DATE=`date "+%YY-%m-%d"`
-
-echo $DATE > ./info.html
-
-echo "Amit Kaushik" >> ./info.html
 
 
+echo "------------Installing app-----------------------"
+
+/usr/libexec/s2i/asseble
+
+
+cp -Rf /tmp/src/* /opt/app-root/src/
+
+echo "Amit Kaushik" > /opt/app-root/src/info.html
+echo "\n" >> /opt/app-root/src/info.html
+
+echo `date +%Y-%m-%d` >> /opt/app-root/src/info.html
